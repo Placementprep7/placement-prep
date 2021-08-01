@@ -113,7 +113,7 @@ expObj.use((err,req,res,next)=>{
 
 
 //port number
-port =process.env.PORT||8080
+port =8080
 
  //assigning port number
  expObj.listen(port,()=>{
