@@ -12,6 +12,7 @@ import { SearchQuestionComponent } from './search-question/search-question.compo
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 
 const routes: Routes = [
+  {path:'',redirectTo:'login',pathMatch:'full'},
   {path:'login',component:LoginComponent},
   {path:'userdashboard',component:UserdashboardComponent},
   {path:'admindashboard',component:AdmindashboardComponent},
