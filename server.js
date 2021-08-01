@@ -1,7 +1,7 @@
 //importing express
 const exp= require("express")
 
-require("dotenv").config()
+
 
 //getting express object
  const expObj=exp()
