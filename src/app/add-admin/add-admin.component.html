@@ -1,0 +1,83 @@
+<header>
+
+  <!--------TOP HEADER-------->
+
+  <div class="right-header">
+    <div class="user-image">
+      <p>{{username}}</p>
+      <button (click)="logout()">LOG OUT</button>
+    </div>
+    <!--<div class="messages">
+	    	<img src="message1.jpg">
+	    	<img src="message1.jpg">
+	    </div>-->
+  </div>
+</header>
+
+<!--------LEFT SIDE DASHBOARD-------->
+
+<div class="left-side-dashboard">
+  <div class="left-side">
+    <div class="logo">Placement Prep</div>
+    <div class="links">
+      <a routerLink="/masteradmindashboard">Dashboard</a>
+      <hr />
+      <a routerLink="/addAdmin">Add Admins</a>
+      <hr />
+      <a routerLink="/addExam">Add Exams</a>
+      <hr />
+      <a routerLink="/addCourse"
+        >Add Lecture</a>
+      <hr />
+      <a routerLink="/addQuestion"
+        >Add Questions</a>
+      <hr />
+      <!--<a routerLink="/addCourse">Add Course</a><br><hr>-->
+      <a routerLink="/searchPage">Search</a>
+      <hr />
+      <a routerLink="/viewUser">View Users</a>
+      <hr />
+      <a routerLink="/viewAdmin"
+        >View Admin</a>
+      <hr />
+    </div>
+  </div>
+</div>
+
+<!--------ADD ADMIN FORM-------->
+
+<div class="addAdmin-form" id="addAdmin">
+  <h3>Add Admin</h3>
+  <br />
+  <form #addAdminRef="ngForm" (ngSubmit)="addAdmin(addAdminRef.value)">
+    <input type="text" name="name" required placeholder="Name..." ngModel /><br />
+    <input
+      type="text"
+      name="username"
+      required
+      placeholder="Username..."
+      ngModel
+    /><br />
+    <input
+      type="email"
+      name="mail"
+      required
+      placeholder="Email..."
+      ngModel
+    /><br />
+    <input
+      type="password"
+      name="password"
+      required
+      placeholder="Password..."
+      ngModel
+    /><br />
+    <textarea
+      placeholder="Other-Details..."
+      name="other-details"
+      ngModel
+    ></textarea
+    ><br />
+    <button type="submit" class="add-Button">Save</button>
+  </form>
+</div>

@@ -1,0 +1,36 @@
+
+<div class="left-side-dashboard">
+	<div class="left-side">
+	
+		<div class="logo">Placement Prep</div>
+		<div class="links">
+			<a routerLink="">Dashboard</a><br><hr>
+			<a routerLink="/addAdmin">Add Admins</a><br><hr>
+			<a routerLink="/addExam">Add Exams</a><br><hr>
+			<a routerLink="/addQuestion">Add Questions</a><br><hr>
+			<a routerLink="/addLecture">Add Lecture</a><br><hr>
+			<a routerLink="/searchQuestion">search question</a><br><hr>
+			<a > Users</a><br><hr>
+		</div>
+	</div>
+	
+	
+	</div>
+<form #searchRef="ngForm" (ngSubmit)="search(searchRef.value)">
+
+<input type="text" name="qId" ngModel>
+<button type="submit" class="add-Button">SUBMIT</button>
+</form>
+<form #questionRef="ngForm" (ngSubmit)="update(questionRef.value)">
+    <input type="text" name="questionId" placeholder="Question Id" required ngModel [(ngModel)]=questionId><br>
+
+    <input type="text" name="question" placeholder="question" required ngModel  [(ngModel)]=question><br>      
+    <input type="text" name="optionA" placeholder="Option A" required ngModel  [(ngModel)]=optionA><br>
+    <input type="text" name="optionB" placeholder="Option B" required ngModel [(ngModel)]=optionB><br>
+    <input type="text" name="optionC" placeholder="Option C" required ngModel [(ngModel)]=optionC><br>
+    <input type="text" name="optionD" placeholder="Option D" required ngModel [(ngModel)]=optionD><br>
+    <input type="text" name="correctOption" placeholder="Correct Option" required ngModel [(ngModel)]=correctOption><br>
+    
+    <textarea placeholder="Explanation" name="explanation" ngModel [(ngModel)]=explanation></textarea><br>
+    <button type="submit" class="add-Button">SUBMIT</button>
+</form>

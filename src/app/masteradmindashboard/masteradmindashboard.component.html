@@ -1,0 +1,67 @@
+<header>
+
+  <!--------TOP HEADER-------->
+
+  <div class="right-header">
+    <div class="user-image">
+      <p>{{username}}</p>
+      <button (click)="logout()">LOG OUT</button>
+    </div>
+    <!--<div class="messages">
+	    	<img src="message1.jpg">
+	    	<img src="message1.jpg">
+	    </div>-->
+  </div>
+</header>
+
+
+<!--------LEFT SIDE DASHBOARD-------->
+
+<div class="left-side-dashboard">
+  <div class="left-side">
+    <div class="logo">Placement Prep</div>
+    <div class="links">
+      <a routerLink="/masteradmindashboard">Dashboard</a>
+      <hr />
+      <a routerLink="/addAdmin">Add Admins</a>
+      <hr />
+      <a routerLink="/addExam">Add Exams</a>
+      <hr />
+      <a routerLink="/addCourse"
+        >Add Lecture</a>
+      <hr />
+      <a routerLink="/addQuestion"
+        >Add Questions</a>
+      <hr />
+      <!--<a routerLink="/addCourse">Add Course</a><br><hr>-->
+      <a routerLink="/searchPage">Search</a>
+      <hr />
+      <a routerLink="/viewUser">View Users</a>
+      <hr />
+      <a routerLink="/viewAdmin"
+        >View Admin</a>
+      <hr />
+    </div>
+  </div>
+</div>
+	
+
+
+	
+
+<!--<div class="dashboard-center">
+	<div class="box">
+		<h3>Total Students Registered</h3>
+		<p>00</p><br><br><br><br>
+	</div>
+	<div class="box">
+		<h3>Total Admins Registered</h3>
+		<p>00</p><br><br><br><br>
+	</div>
+	<div class="box">
+	   <h3>Live Exams</h3>
+	   <p>00</p><br><br><br><br>
+	</div>
+	<br><br>
+</div>-->
+<router-outlet></router-outlet>

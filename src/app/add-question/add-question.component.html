@@ -1,0 +1,114 @@
+<header>
+
+  <!--------TOP HEADER-------->
+
+  <div class="right-header">
+    <div class="user-image">
+      <p>{{username}}</p>
+      <button (click)="logout()">LOG OUT</button>
+    </div>
+    <!--<div class="messages">
+	    	<img src="message1.jpg">
+	    	<img src="message1.jpg">
+	    </div>-->
+  </div>
+</header>
+
+<!--------LEFT SIDE DASHBOARD-------->
+
+<div class="left-side-dashboard">
+  <div class="left-side">
+    <div class="logo">Placement Prep</div>
+    <div class="links">
+      <a routerLink="/masteradmindashboard">Dashboard</a>
+      <hr />
+      <a routerLink="/addAdmin">Add Admins</a>
+      <hr />
+      <a routerLink="/addExam">Add Exams</a>
+      <hr />
+      <a routerLink="/addCourse"
+        >Add Lecture</a>
+      <hr />
+      <a routerLink="/addQuestion"
+        >Add Questions</a>
+      <hr />
+      <!--<a routerLink="/addCourse">Add Course</a><br><hr>-->
+      <a routerLink="/searchPage">Search</a>
+      <hr />
+      <a routerLink="/viewUser">View Users</a>
+      <hr />
+      <a routerLink="/viewAdmin"
+        >View Admin</a>
+      <hr />
+    </div>
+  </div>
+</div>
+
+<!--------ADD QUESTION FORM-------->
+
+<!--<div class="addQuestion-form" id="addQuestion">
+    <h3>Add Question</h3><br>
+    <form #questionRef="ngForm" (ngSubmit)="addQuestion(questionRef.value)">
+        <input type="text" name="questionId" placeholder="Question Id" required ngModel><br>
+
+        <input type="text" name="question" placeholder="question" required ngModel><br>      
+        <input type="text" name="optionA" placeholder="Option A" required ngModel><br>
+        <input type="text" name="optionB" placeholder="Option B" required ngModel><br>
+        <input type="text" name="optionC" placeholder="Option C" required ngModel><br>
+        <input type="text" name="optionD" placeholder="Option D" required ngModel><br>
+        <input type="text" name="correctOption" placeholder="Correct Option" required ngModel><br>
+        
+        <textarea placeholder="Explanation" name="explanation" ngModel></textarea><br>
+        <button type="submit" class="add-Button">SUBMIT</button>
+    </form>
+</div>-->
+
+
+
+<div class="addQuestion-form" id="addQuestion">
+		<h3>Add Question</h3>
+		<br>
+
+
+		
+		<form #qstnRef='ngForm' (ngSubmit)="addQuestion(qstnRef.value)">
+      <input type="text" name="questionId" placeholder="Question Id..." style="width: 29%; margin-left: 0px;" required ngModel>
+      <p>select subject</p>
+      <select (change)="getId($event)" name="subject" ngModel required>
+        <option selected>select subject</option>
+        <option *ngFor ="let subjectObj of subjects"  value="{{subjectObj.subject}}">{{subjectObj.subject}}</option>
+      </select><br>
+  <p>select chapter</p>
+      <select name="chapter" ngModel>
+        <option selected>select chapter</option>
+        <option *ngFor ="let chapterObj of chapters"  value="{{chapterObj.chapter}}">{{chapterObj.chapter}}</option>
+      </select><br>
+      <p>select difficulty level</p>
+		<select  name="difficulty" placeholder="Dificulty" style="width: 29%; margin-left: 0px;" id="d" required ngModel>difficulty leve
+    <option selected>select difficulty</option>
+    <option value="easy">easy</option>
+    <option value="medium">medium</option>
+    <option value="difficult">difficult</option>
+    </select><br><br>
+      
+			<input type="text" class="question" name="question" placeholder="Question" required ngModel><br>
+			
+			<div style="display: flex;flex-direction: row;">
+				<input type="text" name="optionA" placeholder="Option A..." style="width: 100%; margin-left: 0px;" required ngModel>
+			  <input type="text" name="optionB" placeholder="Option B..." style="width: 100%; margin-left: 55px;" id="b" required ngModel>
+			</div><br>
+			
+			<div style="display: flex;flex-direction: row;">
+			  <input type="text" name="optionC" placeholder="Option C..." style="width: 100%; margin-left: 0px;" required ngModel>
+			  <input type="text" name="optionD" placeholder="Option D..." style="width: 100%; margin-left: 55px;" id="d" required ngModel><br>
+			</div><br>
+			<div style="display: flex;flex-direction: row;">
+			  <input type="text" name="correctOption" placeholder="Correct Option..." style="width: 48%; margin-left: 0px;border: 2px solid forestgreen;" required ngModel>
+			</div><br>
+			<div>
+				<textarea placeholder="Explanation..." name="explanation" style="width: 100%;" ngModel></textarea><br>
+			</div><br>
+			
+			  <button type="submit" class="add-Button">SUBMIT</button>
+		</form>
+	</div>

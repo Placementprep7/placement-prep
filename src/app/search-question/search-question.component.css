@@ -1,0 +1,41 @@
+
+
+.logo{
+	font-family: 'Ubuntu', sans-serif;
+	position: relative;
+	top: 30px;
+	left: 5px;
+}
+.left-side{
+	position: sticky;
+	position: relative;
+	top: 0px;
+	font-size: 25px;
+	width: 12%;
+	height: 100%;
+	background-color: turquoise;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+
+}
+a:hover{color: red;transition: 0.8s;}
+
+.links{
+	margin-top: 56px;
+	padding-left: 0px;
+	display: flex;
+	text-align: center;
+	font-family: 'Ubuntu', sans-serif;
+	flex-direction: column;
+}
+.links a{
+    padding-top: 50px;
+}
+hr{
+	align-self: center;
+	width: 90%;
+	border-top:  1px solid white;
+}
