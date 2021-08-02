@@ -12,13 +12,16 @@ const path=require("path")
 //connecting dist folder with server
 expObj.use(exp.static(path.join(__dirname,'dist/placement-prep')))
 
+//importing env
+require('dotenv').config()
 
 
-//importing mongoClient
-const mc =require("mongodb").MongoClient
 
 //db url
-dbUrl="mongodb+srv://Placement-prep:Prepdata_7@cluster0.qbtsl.mongodb.net/placementPrep?retryWrites=true&w=majority"
+const dbUrl="mongodb+srv://Placement-prep:Prepdata_7@cluster0.qbtsl.mongodb.net/placementPrep?retryWrites=true&w=majority"
+
+//importing mongoClient
+const mc =require('mongodb').MongoClient
 
 //connecting to database
 mc.connect(dbUrl,{useNewUrlParser:true,useUnifiedTopology:true},(err,client)=>{
@@ -113,9 +116,9 @@ expObj.use((err,req,res,next)=>{
 
 
 //port number
-port =5009
+port =process.env.PORT
 
  //assigning port number
  expObj.listen(port,()=>{
-     
+     console.log('server started ')
  })
