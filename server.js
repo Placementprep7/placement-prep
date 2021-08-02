@@ -18,7 +18,7 @@ require('dotenv').config()
 
 
 //db url
-const dbUrl="mongodb+srv://Placement-prep:Prepdata_7@cluster0.qbtsl.mongodb.net/placementPrep?retryWrites=true&w=majority"
+const dbUrl=process.env.DBURL
 
 //importing mongoClient
 const mc =require('mongodb').MongoClient
@@ -116,7 +116,7 @@ expObj.use((err,req,res,next)=>{
 
 
 //port number
-port =process.env.PORT
+port =process.env.PORT||5000
 
  //assigning port number
  expObj.listen(port,()=>{
