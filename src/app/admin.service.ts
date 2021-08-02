@@ -23,7 +23,7 @@ addQuestionFUn(questionObj):Observable<any>{
 
 //function to get question
 getQuestion(questionId):Observable<any>{
-return this.hc.get('/question/get/'+questionId)
+return this.hc.get(`/question/get/${questionId}`)
 }
 
 
